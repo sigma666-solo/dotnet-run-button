@@ -1,40 +1,51 @@
 {
   "name": "dotnet-run-button",
-  "displayName": "rm -rf .git",
+  "displayName": ".NET Run Button",
   "description": "Quickly execute dotnet-run commands with a click of a button",
   "version": "0.0.1",
-    "publisher": "sigma666-solo",
+  "publisher": "sigma666-solo",
   "repository": {
     "type": "git",
     "url": "https://github.com/sigma666-solo/dotnet-run-button"
   },
-
   "engines": {
-    "vscode": "^1.115.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["*"],
   "main": "./out/extension.js",
-"contributes": {
-  "commands": [
-    {
-      "command": "dotnet-run-button.run",
-      "title": "Run .NET Project",
-      "icon": "$(play) Запустить"
-    }
-  ],
-  "menus": {
-    "view/title": [
+  "contributes": {
+    "commands": [
       {
         "command": "dotnet-run-button.run",
-        "when": "true",
-        "group": "navigation"
+        "title": "Run .NET Project"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "dotnet-run-button.run",
+          "group": "navigation"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "dotnet-run-button.run",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "dotnet-run-button.run",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r",
+        "when": "editorLangId == csharp || workspaceContains:**/*.csproj"
       }
     ]
-  }
-},
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -44,7 +55,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.115.0",
+    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
     "typescript-eslint": "^8.56.1",
