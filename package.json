@@ -1,12 +1,12 @@
 {
   "name": "yes",
-  "displayName": "dotnet-run-button",
+  "displayName": "rm -rf .git",
   "description": "Quickly execute dotnet-run commands with a click of a button",
   "version": "0.0.1",
     "publisher": "sigma666-solo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/dotnet-run-button"
+    "url": "https://github.com/sigma666-solo/dotnet-run-button"
   },
 
   "engines": {
