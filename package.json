@@ -1,5 +1,5 @@
 {
-  "name": "yes",
+  "name": "dotnet-run-button",
   "displayName": "rm -rf .git",
   "description": "Quickly execute dotnet-run commands with a click of a button",
   "version": "0.0.1",
